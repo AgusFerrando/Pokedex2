@@ -1,10 +1,19 @@
 import baseDatos from "./base_datos.js";
 const base_datos = JSON.parse(baseDatos);
 
-// let filtrados;
-// window.onload = function () {
-//     filtrados= base_datos.filter(poke => poke.tipo.includes(global.filterTipo))
-// }  
+
+var url= new URL(window.location);
+var params = new URLSearchParams(url.search)
+let tipoParam = params.get("tipo");
+console.log(tipoParam)
+
+function filterBy (tipo){
+    let filteredData = base_datos.filter(poke => poke.tipo.includes(tipo))
+    return filteredData;
+}
+
+let filtrados = filterBy(tipoParam);
+console.log(filtrados);
 
 function pokemon_to_html (nombre, imagenes){
     let pokemon = '<div class="catalogo2">';
@@ -16,9 +25,9 @@ function pokemon_to_html (nombre, imagenes){
 
 let pokemon_html = "";
 
-for (let i=0; i<base_datos.length; i++){ 
-    let nombre = base_datos[i].nombre;
-    let imagenes = base_datos[i].imagenes;
+for (let i=0; i<filtrados.length; i++){ 
+    let nombre = filtrados[i].nombre;
+    let imagenes = filtrados[i].imagenes;
     pokemon_html += pokemon_to_html(nombre,  imagenes)
 }
 

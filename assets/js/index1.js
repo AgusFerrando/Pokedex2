@@ -1,3 +1,7 @@
+import baseDatos from "./base_datos.js";
+const base_datos = JSON.parse(baseDatos);
+
+
 let carrousel = function() {
     let foto = document.getElementsByClassName("picture");
     let teller = 0;
@@ -17,24 +21,9 @@ let carrousel = function() {
           
 };
 
+window.onload = function () {
+    setInterval(carrousel,1500);
+}   
 
 
-
-// window.onload = function () {
-//     let ver= document.getElementsByClassName('picture');
-//     for (let i=0; i<ver.length; i++){
-//         ver[i].addEventListener("click", filtrar(ver[i].id))
-//     }
-//     setInterval(carrousel,1000);
-// }    
-
-
-// let filtrados;
-// function filtrar(tipo){
-   
-//     filtrados= base_datos.filter(poke => poke.tipo.includes(tipo))
-//     window.location.href="http://127.0.0.1:5501/index2.html";
-// }
-
-// export default filtrados;
 

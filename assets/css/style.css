@@ -185,7 +185,7 @@ html {
   } */
   
   .tipos-menu2 {
-    display: none;
+    display: block;
     width: 150px;
     font-family: "orbitron";
     text-align: center;
@@ -197,13 +197,13 @@ html {
     margin-left: 45%;
   }
   
-  
+/*   
   #tipos-pokemon:hover ~ .tipos-menu2{
     display: block;
-  }
+  } */
   
-  .tipos-menu2 a:hover{
-    background-color: rgba(28, 76, 232, 0.43);
+  .tipos-menu2 .select:hover{
+    color: rgba(28, 76, 232, 0.43);
   }
 
 
