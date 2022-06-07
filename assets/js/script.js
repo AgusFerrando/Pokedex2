@@ -1,10 +1,10 @@
 import baseDatos from "./base_datos.js";
 const base_datos = JSON.parse(baseDatos);
 
-let filtrados;
-window.onload = function () {
-    filtrados= base_datos.filter(poke => poke.tipo.includes(global.filterTipo))
-}
+// let filtrados;
+// window.onload = function () {
+//     filtrados= base_datos.filter(poke => poke.tipo.includes(global.filterTipo))
+// }  
 
 function pokemon_to_html (nombre, imagenes){
     let pokemon = '<div class="catalogo2">';

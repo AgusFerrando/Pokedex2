@@ -1,6 +1,6 @@
 import baseDatos from "./base_datos.js";
-
 const base_datos = JSON.parse(baseDatos);
+
 function pokemon_to_index3 (nombre, imagenes, numero, tipo, peso, altura, debilidad){
     let pokemon2= '<div class="imagen-pokemones">';
     pokemon2 +=`<img src='${imagenes}'><br>`;

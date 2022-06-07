@@ -20,19 +20,21 @@ let carrousel = function() {
 
 
 
-window.onload = function () {
-    let ver= document.getElementsByClassName('select');
-    for (let i=0; i<ver.length; i++){
-        ver[i].addEventListener("click", e => filtrar(ver[i].id, e))
-    }
-    setInterval(carrousel,2000);
-}    
+// window.onload = function () {
+//     let ver= document.getElementsByClassName('picture');
+//     for (let i=0; i<ver.length; i++){
+//         ver[i].addEventListener("click", filtrar(ver[i].id))
+//     }
+//     setInterval(carrousel,1000);
+// }    
 
 
+// let filtrados;
+// function filtrar(tipo){
+   
+//     filtrados= base_datos.filter(poke => poke.tipo.includes(tipo))
+//     window.location.href="http://127.0.0.1:5501/index2.html";
+// }
 
-function filtrar(tipo, event){
-    event.preventDefault();
-    global.filterTipo= tipo;
-    window.location.href="http://127.0.0.1:5501/index2.html";
-}
+// export default filtrados;
 
