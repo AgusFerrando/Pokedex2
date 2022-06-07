@@ -1,4 +1,3 @@
-import global from "./global.js";
 import baseDatos from "./base_datos.js";
 const base_datos = JSON.parse(baseDatos);
 
@@ -17,9 +16,9 @@ function pokemon_to_html (nombre, imagenes){
 
 let pokemon_html = "";
 
-for (let i=0; i<filtrados.length; i++){ 
-    let nombre = filtrados[i].nombre;
-    let imagenes = filtrados[i].imagenes;
+for (let i=0; i<base_datos.length; i++){ 
+    let nombre = base_datos[i].nombre;
+    let imagenes = base_datos[i].imagenes;
     pokemon_html += pokemon_to_html(nombre,  imagenes)
 }
 

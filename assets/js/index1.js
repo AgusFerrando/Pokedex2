@@ -1,6 +1,3 @@
-import global from "./global.js";
-
-
 let carrousel = function() {
     let foto = document.getElementsByClassName("picture");
     let teller = 0;
