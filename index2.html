@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style2.css" />
-  </head>
-  <body>
-    <header>
-      <img src="./assets/img/PokedexLogo.png" class="logo-pokedex" />
-      <a href="./index.html">Inicio</a>
-      <div><img src="./assets/img/pokeball_logo1.png" class="pokebola" /></div>
-    </header>
-    <picture
-      ><img src="./assets/img/pokemon-logo.png" class="pokemon-logo"
-    /></picture>
-    <main class="filtrados">
-      <div class="catalogo"></div>
-    </main>
-
-
-    <script src="./assets/js/script.js" type="module"></script>
-  </body>
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Document</title>
+   <link rel="stylesheet" href="/assets/css/style2.css" />
+ </head>
+ <body>
+   <header>
+     <picture id="img-pokdx"
+       ><img id="l-pokedex" src="/assets/img/PokedexLogo.png"
+     /></picture>
+     <input type="checkbox" id="btn_menu" />
+     <label for="btn_menu"
+       ><img
+         src="/assets/img/pokeball_icon.png"
+         width="50px"
+         height="50px"
+         alt=""
+         id="img_menu"
+     /></label>
+     <nav class="listaEncabezado">
+       <ul>
+         <li><a href="#historia">Historia</a></li>
+         <li><a href="#titulo_nos">Sobre Nosotros</a></li>
+         <li><a href="#contactos">Contacto</a></li>
+       </ul>
+     </nav>
+   </header>
+   <picture
+     ><img src="/assets/img/pokemon-logo.png" class="pokemon-logo"
+   /></picture>
+   <main class="filtrados">
+     <div class="catalogo"></div>
+   </main>
+ 
+   <footer id="contactos">
+    <ul>
+      <h1>CONTACTANOS</h1>
+      <br /><br />
+      <li>GRUPO 2</li>
+      <br /><br />
+      <li>Agus</li>
+      <li>David</li>
+      <li>Karol</li>
+      <li>Cristian</li>
+    </ul>
+  </footer>
+ 
+   <script src="/assets/js/script.js" type="module"></script>
+ </body>
 </html>
