@@ -108,7 +108,10 @@
     src: url(/assets/fuentes/Ubuntu-Light.ttf);
  }
   
-  
+#l-pokedex{
+  display: none;
+}
+
  .pokebola{
     height: 130px; 
  }
@@ -386,8 +389,8 @@ footer ul {
     color: white;
     text-align: left;
     list-style: none;
-  }
+  }*/
 
  }
-  */
+  
  
