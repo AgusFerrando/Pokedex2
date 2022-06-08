@@ -25,7 +25,7 @@ function pokemon_to_html (nombre, imagenes){
 
 let pokemon_html = "";
 
-for (let i=0; i<filtrados.length; i++){ 
+for (let i=0; i<filtrados.length; i++){  
     let nombre = filtrados[i].nombre;
     let imagenes = filtrados[i].imagenes;
     pokemon_html += pokemon_to_html(nombre,  imagenes)
