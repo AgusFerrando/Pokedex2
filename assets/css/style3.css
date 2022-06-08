@@ -15,39 +15,98 @@ body{
     min-height: 100vh;
 }
 
-header{
-    background-image: url("/assets/img/_head_.png");
-    background-position: bottom; 
+
+header {
+    background-image: url(/assets/img/barra_head.png);
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
     height: 170px;
-    width: 100%;
+    padding-top: 4em;
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    
-    
+    justify-content: flex-end;
+    width: 100%;
 }
-header div {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
 
+header li {
+    transition: 0.5s ease-in-out;
+}
+    
+#btn_menu {
+    display: none;
+}
+    
+header label {
+    position: absolute;
+    margin: 0px;
+    top: 1em;  
+}
+    
+header label:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.315);
+}
+    
+#b-head {
+    width: 100%;
+    height: auto;
+}
+
+#img_menu {
+    display: none;
+}
+   
+.listaEncabezado {
+    display: flex;
+    justify-content: center;
+}
+
+    
+.listaEncabezado ul {
+    width: 75%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.listaEncabezado li {
+    align-self: center;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    font-family: "Orbitron";
+    height: 40px;
+    width: 200px;
+}
+
+.listaEncabezado li:hover {
+    background-color: rgba(28, 76, 232, 0.43);
+    color: rgb(238, 37, 37);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 0px;
+    cursor: pointer;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+text-decoration: none;
+color: inherit;
+}
+    
+    
 .logo-pokedex{
     height: 60px;
     margin-left: 30px;
+    margin-top: 30px;
 }
-
-.listaEncabezado{
-    width: 35%;
-    margin-left: 25%;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-}
+    
 
 @font-face{
     font-family: Orbitron;
@@ -59,31 +118,15 @@ header div {
     src: url(/assets/fuentes/Ubuntu-Light.ttf);
 }
 
-a {
-    align-self: center;
-    text-decoration: none;
-    margin-left: 40%;
-    text-align: left;
-    font-size: 20px;
-    color: white;
-    font-family: "Orbitron";
-    height: 40px;
-    width: 100px;
+ 
+#l-pokedex{
+    display: none;
 }
-
-a:hover{
-    background-color: silver;
-    color: black;
-    border-radius: 5px;
-    text-align: center;
-    padding-top: 5px;
-    cursor: pointer;
-}
+  
 .pokebola{
-    height: 130px;
-    margin-top: -4em;
+    height: 130px; 
 }
-
+    
 #cuadros{
     height: 100px;
     width: 25%;
@@ -115,15 +158,16 @@ a:hover{
     justify-content: center;
     height: 100px;
 }
+
 .marco3{
     background-image: url(/assets/img/margen_pokemon.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 1300px;
-     display: flex;
-    flex-direction: row;
+    display: flex;
     justify-content: center; 
+    align-content: center;
 
 }
 
@@ -133,87 +177,103 @@ a:hover{
     font-family: "Orbitron";
     display: flex;
     flex-direction: column;
-    padding: 8em;
+    margin-top: 5%;
+    margin-left: 30%;  
 }
 
-
-.datos-pokemon li{
-    color: #000;
-    font-size: 20px;
-    font-family: "Orbitron";
-    list-style: none;
-    margin-top: 5px;
-   
+.imagen-pokemones img{
+    width: 60%;
+    margin-top: 10em;
 }
-.datos-pokemon {
-    margin-left: 38%;
-    margin-top: 60px;
-}
-footer{
-    background-image: url("/assets/img/footer-pokemon.jpg");
-    background-size: cover;
-    width: 100%;
-    height: 100px;
-    margin-top: 50px;
-}
-
-footer p{
-    font-family: 'Ubuntu';
-    font-size: 17px;
-    color: white;
-    margin-left: 20px;
-    height: 30px;
-    text-align:left;
-} 
 
 @media screen and (max-width: 600px) {
-    body {
-        margin: 0px;
-        padding: 0px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-    }
-    
-header {
-        width: 100%;
-        height: 100px;
-        background-size: cover;
-        background-position: left;
-}
-    
-.logo-pokedex{
-    height: 25px;
-    margin-top: 0.2em;
-    align-self: center;
-}
-
-.pokebola{
-    height: 60px;
-    margin-top: 0.2em;    
-}
-
-.imagen-pokemones{
-    width: 200px;
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    
-
+    box-sizing: border-box;
 }
-.imagen-pokemones img {
-    width: 120px;
-    height: 120px;
-    padding-top: 30px;
-    padding-right: 70px;  
-} 
 
-.imagen-pokemones span {
+header {
     width: 100%;
-    height: auto;
-    margin-left: 2%; 
+    height: 100px;
+    background-size: cover;
+    background-position: left;
+}
+    
+#l-pokedex {
+    margin-top: 10rem;
+    margin-left: 15px;
+    width: 0%;
+}
+
+.pokemon-logo{
+    width: 150px;
+    margin: 0px;
+    padding: 0px;
+}
+    
+#img_menu {
+    display: flex;
+    position: absolute;
+    right: 2em;
+    top: 3.5em;
+}
+    
+.listaEncabezado {
+    position: absolute;
+    bottom: -4.5em;
+    right: 1em;
+    background-color: rgba(0, 0, 255, 0.519);
+    height: 120px;
+    display: none;
+}
+    
+.listaEncabezado ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1em;
     font-size: 8px;
+}
+    
+#btn_menu:checked ~ .listaEncabezado {
+    display: flex;
+}
+    
+.pokemon-logo {
+    height: 30%;
+}
+
+.logo-pokedex {
+    height: 60px;
+    margin-left: 30px;
+}
+
+.marco3{
+    width: 90%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+   
+.imagen-pokemones{
+    color: #000;
+    font-size: 10px;
+    font-family: "Orbitron";
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;  
+    margin-top: 1%;
+}
+
+.imagen-pokemones img{
+    width: 60%;
+    margin-top: 10em;
 }
 
 #cuadros{
@@ -240,38 +300,5 @@ header {
     background-color: rgb(221, 17, 10);
     width: 30px;
     height: 30px;
-}
-.marco3 {
-    width: 90%;
-    height: 600px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; 
-}
-
-a {
-    align-self: center;
-    text-decoration: none;
-    margin-left: 25%;
-    text-align: left;
-    font-size: 15px;
-    color: white;
-    font-family: 'Orbitron';
-    height: 8px;
-    width: 100%;
-
-}
-    
-footer {
-    width: 100%;
-    height: 100px;
-    align-self: flex-end;
-    
-}
-
-footer p{
-    font-size: 15px;
-    margin-top: 30px;
-    
 }
 }

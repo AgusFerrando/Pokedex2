@@ -18,7 +18,7 @@ console.log(filtrados);
 function pokemon_to_html (nombre, imagenes){
     let pokemon = '<div class="catalogo2">';
     pokemon +=`<img src='${imagenes}'><br>`;
-    pokemon += `<span> ${nombre} </span><br>`;
+    pokemon += `<span><a href='./index3.html?nombre=${nombre}'> ${nombre} </a></span><br>`;
     pokemon += '</div>';
     return pokemon;
 }
