@@ -180,6 +180,10 @@ a:active {
   font-size: 36px;
 }
 
+#tipos-pokemon:hover{
+  transform: scale(1.2);
+  color: rgb(238, 37, 37);
+}
 
 .tipos-menu2 {
   display: block;
@@ -194,9 +198,13 @@ a:active {
   margin-left: 45%;
 }
 
+/* #tipos-pokemon:hover > ul{
+  display: block;
+} */
 
 .tipos-menu2 .select:hover{
   color: rgb(238, 37, 37);
+  transform: scale(1.3);
 }
 
 
