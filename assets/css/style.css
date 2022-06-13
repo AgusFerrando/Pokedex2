@@ -266,15 +266,22 @@ footer {
   border-top: 9px solid rgba(188, 188, 188, 1);
 }
 
-footer ul {
-  font-family: "Ubuntu";
-  font-size: 15px;
-  color: white;
-  margin-left: 20px;
-  height: 50px;
-  text-align: left;
-  list-style: none;
+.redes-sociales {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  margin-left: 5em;
 }
+
+.redes-sociales img{
+  align-self: center;
+  width: 40px;
+  margin-left: 5px;
+}
+
 @media screen and (max-width: 600px) {
   body {
     margin: 0px;
@@ -430,11 +437,19 @@ footer ul {
     height: 100px;
   }
 
-  footer ul {
-    font-family: "Ubuntu";
-    font-size: 8px;
-    color: white;
-    text-align: left;
-    list-style: none;
+.redes-sociales {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.3em;
+    margin-left: 5em;
+  }
+  
+  .redes-sociales img{
+    align-self: center;
+    width: 25px;
+    margin-left: 5px;
   }
 }
