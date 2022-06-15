@@ -1,3 +1,4 @@
+import Pokemon from "./pokemon.js";
 import baseDatos from "./base_datos.js";
 const base_datos = JSON.parse(baseDatos);
 
@@ -15,22 +16,16 @@ function filterBy (tipo){
 let filtrados = filterBy(tipoParam);
 console.log(filtrados);
 
-function pokemon_to_html (nombre, imagenes){
-    let pokemon = '<div class="catalogo2">';
-    pokemon +=`<img src='${imagenes}'><br>`;
-    pokemon += `<span><a href='./index3.html?nombre=${nombre}'> ${nombre} </a></span><br>`;
-    pokemon += '</div>';
-    return pokemon;
-}
-
-let pokemon_html = "";
+let pokemonList = [];
 
 for (let i=0; i<filtrados.length; i++){  
-    let nombre = filtrados[i].nombre;
-    let imagenes = filtrados[i].imagenes;
-    pokemon_html += pokemon_to_html(nombre,  imagenes)
-}
+    let poke = new Pokemon ( filtrados[i].imagenes,
+                         filtrados[i].nombre ).to_html()
+    
+    pokemonList.push(poke);
+    
+}   let pokemonList2 = pokemonList.toString();
 
-document.querySelector('.catalogo').innerHTML = pokemon_html
 
+document.querySelector('.catalogo').innerHTML = pokemonList2
 
