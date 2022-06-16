@@ -29,3 +29,4 @@ for (let i=0; i<filtrados.length; i++){
 
 document.querySelector('.catalogo').innerHTML = pokemonList2
 
+module.exports= filterBy;
